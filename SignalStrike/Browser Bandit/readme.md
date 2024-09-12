@@ -1,1 +1,1 @@
-**Browser Bandit (SignalStrike)
+**Browser Bandit (SignalStrike)**
