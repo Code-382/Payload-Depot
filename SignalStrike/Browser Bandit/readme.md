@@ -17,10 +17,6 @@ To set up a Discord webhook, follow these steps:
 3. Navigate to **Integrations > New Webhook**.
 4. Copy the webhook link and save it somewhere safe for later use.
 
-![]([image-url](https://discordjs.guide/assets/creating-webhooks-1.afb4d719.png))
-
-
-
 ## 2. Download `Payload.txt`
 
 Next, you need to download `Payload.txt`. You can get it either from the Code-382 GitHub repository or by copying the code provided below.
@@ -29,7 +25,7 @@ In the `Payload.txt` file, locate line 12 and replace `<DISCORD WEBHOOK HERE>` w
 
 ### `Payload.txt`
 
-```bash
+bash
 DELAY 100
 GUI d
 GUI r
