@@ -17,7 +17,7 @@ To set up a Discord webhook, follow these steps:
 3. Navigate to **Integrations > New Webhook**.
 4. Copy the webhook link and save it somewhere safe for later use.
 
-![Alt text]([image-url](https://discordjs.guide/assets/creating-webhooks-1.afb4d719.png))
+![]([image-url](https://discordjs.guide/assets/creating-webhooks-1.afb4d719.png))
 
 
 
