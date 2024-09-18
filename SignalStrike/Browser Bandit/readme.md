@@ -45,7 +45,7 @@ STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -C
 ENTER
 ```
 
-3. Upload Your Payload to SignalStrike
+## 3. Upload Your Payload to SignalStrike
 
 1. Plug in your SignalStrike device.
 2. Connect to its WiFi network (Default SSID: SignalStrike, Password: SignalStrike).
